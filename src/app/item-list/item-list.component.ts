@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Item } from './../../models/item';
+import { Component, Input, OnInit } from '@angular/core';
+import { Item } from 'src/models/item';
 
 @Component({
   selector: 'app-item-list',
@@ -8,19 +8,13 @@ import { Item } from './../../models/item';
 })
 export class ItemListComponent implements OnInit {
 
-  items:Item[] = [ {value:"Eat breakfast"}, {value:"Eat dinner"} ]
-  input:string = "";
+  @Input()
+  items:Item[] = []
 
+  @Input()
+  delete:(index:number) => void = () => {}
+  
   constructor() { }
   ngOnInit(): void { }
-
-  delete(id:number) {
-    this.items = this.items.filter((v, i) => i !== id)
-  }
-
-  add() {
-    this.items.push({ value:this.input })
-    this.input = ""
-  }
 
 }

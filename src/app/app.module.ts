@@ -4,11 +4,15 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ItemListComponent } from './item-list/item-list.component';
+import { AddItemComponent } from './add-item/add-item.component';
+import { DynamicItemListComponent } from './dynamic-item-list/dynamic-item-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ItemListComponent
+    ItemListComponent,
+    AddItemComponent,
+    DynamicItemListComponent
   ],
   imports: [
     BrowserModule,

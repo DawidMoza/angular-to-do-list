@@ -1,11 +1,17 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { ItemListComponent } from './item-list/item-list.component';
+import { AddItemComponent } from './add-item/add-item.component';
+import { DynamicItemListComponent } from './dynamic-item-list/dynamic-item-list.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        ItemListComponent,
+        AddItemComponent,
+        DynamicItemListComponent
       ],
     }).compileComponents();
   });
